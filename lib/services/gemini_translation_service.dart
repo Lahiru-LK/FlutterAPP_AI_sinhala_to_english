@@ -2,19 +2,22 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class GeminiTranslationService {
-  static const String _apiKey = "AIzaSyDytxnq3LGzzinjfOm26KBPkQFo8SdBAz0";  // 🔒 Replace with your actual API key
-  static const String _baseUrl =
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
+  static const String _apiKey = "AIzaSyDytxnq3LGzzinjfOm26KBPkQFo8SdBAz0";
+  static const String _baseUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$_apiKey";
 
-  Future<String> translateText(String text) async {
+  Future<String> translateText(String text, bool isEnglishToSinhala) async {
     final response = await http.post(
-      Uri.parse("$_baseUrl?key=$_apiKey"),
+      Uri.parse(_baseUrl),
       headers: {"Content-Type": "application/json"},
       body: jsonEncode({
         "contents": [
           {
             "parts": [
-              {"text": "Translate the following Sinhala text to English: $text"}
+              {
+                "text": isEnglishToSinhala
+                    ? "Translate this English text to Sinhala: $text"
+                    : "Translate this Sinhala text to English: $text"
+              }
             ]
           }
         ]
