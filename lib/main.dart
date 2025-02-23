@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'screens/home_screen.dart'; // ✅ Ensure HomeScreen is imported
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); // ✅ This should be defined
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sinhala to English Translator',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const HomeScreen(),
+      home: const HomeScreen(), // ✅ Ensure `HomeScreen` exists
     );
   }
 }
