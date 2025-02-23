@@ -43,13 +43,19 @@ class HomeScreenState extends State<HomeScreen> {
 
     setState(() => _isLoading = true);
 
-    String translation = await _translationService.translateText(_controller.text);
+    bool isEnglishToSinhala = _sourceLanguage == "English";
+
+    String translation = await _translationService.translateText(
+      _controller.text,
+      isEnglishToSinhala,
+    );
 
     setState(() {
       _translatedText = translation;
       _isLoading = false;
     });
   }
+
 
   // Function to copy translation
   void _copyText() {
