@@ -15,8 +15,8 @@ class GeminiTranslationService {
             "parts": [
               {
                 "text": isEnglishToSinhala
-                    ? "Translate this English text to Sinhala: $text"
-                    : "Translate this Sinhala text to English: $text"
+                    ? "Translate the following English text to Sinhala with proper grammar and structure. Ensure clarity and correctness while keeping it formal and natural, without unnecessary explanations ,  similar to Google Translate: $text"
+                    : "Translate the following Sinhala sentence to English with proper grammar and structure. Ensure clarity and correctness while keeping it formal and natural, similar to Google Translate: $text"
               }
             ]
           }
@@ -35,4 +35,6 @@ class GeminiTranslationService {
       return "Translation failed: ${response.body}";
     }
   }
+
+
 }
