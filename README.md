@@ -1,9 +1,17 @@
 # 📌 FlutterAPP_AI_sinhala_to_english
 
-![White Blue Simple Modern Enhancing Sales Strategy Presentation](https://github.com/user-attachments/assets/517a5e46-9b6d-47f9-9bcb-2fb01af5b9a6)
-
 ## 🌟 Overview
 FlutterAPP_AI_sinhala_to_english is a mobile application designed to provide seamless translations between **Sinhala** and **English** using **AI-powered language models**. The app integrates **Google Gemini AI** to deliver accurate, context-aware, and formal translations while maintaining natural sentence structure.
+
+
+![White Blue Simple Modern Enhancing Sales Strategy Presentation](https://github.com/user-attachments/assets/517a5e46-9b6d-47f9-9bcb-2fb01af5b9a6)
+
+
+
+
+https://github.com/user-attachments/assets/f2388629-9846-49b7-8249-21f08f9f9b4f
+
+
 
 ## 🔥 Key Features
 - 🎯 **Sinhala ↔ English Translation**
